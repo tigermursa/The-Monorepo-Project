@@ -1,3 +1,7 @@
+import HeroSection from "@/components/HeroSection/HeroSection";
+import MainLayout from "@/components/Layouts/MainLayout";
+import Footer from "@/components/shared/Footer/Footer";
+import Navbar from "@/components/shared/Navbar/Navbar";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -5,24 +9,12 @@ import Link from "next/link";
 //   ssr: false,
 // });
 
-export default function Home() {
+export default function Home({ Children }) {
   return (
     <div>
-      <h1>Home App</h1>
-      {/* <PricingPage /> */}
-      <Link href="http://localhost:3001">
-        <button>Go to Pricing App</button>
-      </Link>
+      <Navbar />
+      <MainLayout />
+      <Footer />
     </div>
   );
 }
-
-const buttonStyle = {
-  padding: "10px 20px",
-  background: "#0070f3",
-  color: "#fff",
-  border: "none",
-  cursor: "pointer",
-  borderRadius: "5px",
-  marginTop: "10px",
-};
