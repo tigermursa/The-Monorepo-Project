@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm --prefix apps/home run dev\" \"npm --prefix apps/pricing run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "eslint": "^9.19.0",
+    "eslint-config-next": "^15.1.6"
+  }
+}
