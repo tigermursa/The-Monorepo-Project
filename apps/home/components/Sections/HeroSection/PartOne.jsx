@@ -20,10 +20,10 @@ const PartOne = () => {
       </p>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8 relative">
-        <button className="bg-[#19525A] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#14444A] transition duration-300">
+        <button className="bg-[#19525A] hover:scale-105 text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#14444A] transition duration-300">
           Start A Free Trial
         </button>
-        <button className="flex items-center bg-[#F87316] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#E06512] transition duration-300">
+        <button className="flex items-center hover:scale-105 bg-[#F87316] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#E06512] transition duration-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={24}

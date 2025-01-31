@@ -1,6 +1,14 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
 module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
   webpack(config, options) {
     if (!options.isServer) {
       config.plugins.push(
