@@ -22,9 +22,7 @@ module.exports = {
 
 {
   /* 
-<Container>
-<Industries />
-</Container>
+
 <Features />
 <Container>
 <AppointmentStacks />

@@ -14,6 +14,9 @@ const MainLayout = () => {
       <Container>
         <SocialProofSection />
       </Container>
+      <Container>
+        <Industries />
+      </Container>
     </div>
   );
 };

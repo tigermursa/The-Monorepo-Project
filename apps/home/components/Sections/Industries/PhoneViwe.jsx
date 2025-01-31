@@ -18,23 +18,9 @@ const Industries = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeCard]);
 
-  const handleCardHover = (index) => {
-    if (window.innerWidth >= 768) {
-      // Only trigger hover on desktop
-      setActiveCard(index);
-      setUserInteracted(true);
-    }
-  };
-
   const handleCardClick = (index) => {
     setActiveCard(index);
-    setUserInteracted(true);
-  };
-
-  const handleMouseLeave = () => {
-    if (!userInteracted && window.innerWidth >= 768) {
-      setActiveCard(0); // Reset to first card on desktop if no interaction
-    }
+    setUserInteracted(true); // Mark user interacted
   };
 
   return (
@@ -75,7 +61,7 @@ const Industries = () => {
         </div>
 
         {/* Industry Cards */}
-        <div className="flex gap-4 justify-center items-stretch h-auto md:h-[346px]">
+        <div className="flex justify-center items-stretch h-auto md:h-[346px]">
           {cards.map((card, index) => {
             const isExpanded = activeCard === index;
             return (
@@ -83,12 +69,8 @@ const Industries = () => {
                 key={card.id}
                 className={`relative transition-all duration-[1100ms] cursor-pointer 
                   ${
-                    isExpanded
-                      ? "w-full md:w-[524px]"
-                      : "max-md:hidden w-[110px] md:w-[110px]"
+                    isExpanded ? "w-full md:w-[524px]" : "hidden"
                   } h-[300px] md:h-full overflow-hidden rounded-2xl bg-[#19525A]`}
-                onMouseEnter={() => handleCardHover(index)}
-                onMouseLeave={handleMouseLeave}
               >
                 {/* Image Container */}
                 <div
