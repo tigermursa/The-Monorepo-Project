@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+
+.card {
+  width: 1260px;
+  height: 480px;
+  border-radius: 32px;
+  padding: 32px;
+  position: sticky;
+  top: 200px;
+  transition: transform 0.5s ease;
+  background-color: #0046b0;
+}
+
+.card:nth-child(1) {
+  background-color: #0046b0;
+  z-index: 1;
+}
+
+.card:nth-child(2) {
+  background-color: #327ff0;
+  z-index: 2;
+}
+
+.card:nth-child(3) {
+  background-color: #0046b0;
+  z-index: 3;
+}

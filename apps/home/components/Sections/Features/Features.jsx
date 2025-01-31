@@ -24,7 +24,6 @@ const Features = () => {
               key={id}
               className="bg-[#25646C] border border-transparent shadow-sm hover:border-white hover:shadow-md hover:shadow-gray-300 transition-all duration-300 rounded-[20px] p-5 text-white relative"
             >
-              {/* Add a pseudo-element for the border transition */}
               <div className="absolute inset-0 border-2 border-transparent rounded-[20px] pointer-events-none transition-all duration-300 hover:border-white"></div>
 
               <div className="flex justify-between items-center mb-5">

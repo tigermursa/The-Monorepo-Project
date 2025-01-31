@@ -1,3 +1,4 @@
+import AppointmentStacks from "../Sections/AppointmentStacks/AppointmentStacks";
 import Features from "../Sections/Features/Features";
 import HeroSection from "../Sections/HeroSection/HeroSection";
 import Industries from "../Sections/Industries/Industries";
@@ -10,6 +11,7 @@ const MainLayout = () => {
       <SocialProofSection />
       <Industries />
       <Features />
+      <AppointmentStacks />
     </div>
   );
 };

@@ -4,15 +4,15 @@ import { cards } from "@/data/industryCardData";
 
 const Industries = () => {
   const [activeCard, setActiveCard] = useState(0); // First card
-  const [showText, setShowText] = useState(true); // Text visible  first card
-  const [userInteracted, setUserInteracted] = useState(false); // Track
+  const [showText, setShowText] = useState(true); // Text visible for first card
+  const [userInteracted, setUserInteracted] = useState(false); // Track user interaction
 
   useEffect(() => {
     if (activeCard === 0 && !userInteracted) {
-      setShowText(true); // first card initially
+      setShowText(true); // Show text for first card initially
     } else {
       setShowText(false); // Hide text during expansion
-      const timer = setTimeout(() => setShowText(true), 800); // Show  after expansion
+      const timer = setTimeout(() => setShowText(true), 800); // Show text after expansion
       return () => clearTimeout(timer);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -25,37 +25,37 @@ const Industries = () => {
 
   const handleMouseLeave = () => {
     if (!userInteracted) {
-      setActiveCard(0); // Keeps  first card expanded
+      setActiveCard(0); // Keeps the first card expanded
     }
   };
 
   return (
-    <div className="min-h-screen  py-24 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="mb-16 ">
+        <div className="mb-16">
           <p className="text-[#DC6803] font-bold text-center mb-6 text-base">
             Industries
           </p>
-          <h2 className="text-4xl font-bold text-center  text-[#101828]">
+          <h2 className="text-4xl font-bold text-center text-[#101828]">
             Popular Businesses and Practitioners <br /> who use Ambel
           </h2>
           <p className="text-center mt-5 text-[#667085]">
             Our platform supports a diverse range of professionals, with popular
             industries; including: healthcare providers, medi spas <br />
-            salons , fitness coaches, law agencies, beauty specialists,
+            salons, fitness coaches, law agencies, beauty specialists,
             consultants, and therapists.
           </p>
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex justify-center gap-6 mb-20  w-max items-center mx-auto  border border-gray-400/30 transition-all duration-500 rounded-3xl">
+        <div className="flex justify-center gap-6 mb-20 w-max items-center mx-auto border border-gray-400/30 transition-all duration-500 rounded-3xl">
           {cards.map((card, index) => (
             <button
               key={card.id}
               className={`px-6 py-2 font-semibold rounded-full  
                 ${
                   activeCard === index
-                    ? "bg-primary  text-white"
+                    ? "bg-primary text-white"
                     : "bg-white hover:bg-pink-100 text-gray-800"
                 }`}
               onClick={() => handleCardHover(index)}
@@ -72,7 +72,7 @@ const Industries = () => {
             return (
               <div
                 key={card.id}
-                className={`relative transition-all duration-[800ms] ease-in cursor-pointer 
+                className={`relative transition-all duration-[1100ms] cursor-pointer 
                   ${
                     isExpanded ? "w-[524px]" : "w-[110px]"
                   } h-full overflow-hidden rounded-2xl bg-[#19525A]`}
@@ -82,8 +82,8 @@ const Industries = () => {
                 {/* Image Container */}
                 <div
                   className={`absolute top-0 ${
-                    isExpanded ? "right-0 w-1/3" : "inset-0 w-full"
-                  } h-full transition-all duration-500`}
+                    isExpanded ? "right-0 w-1/3" : "right-0 w-full"
+                  } h-full transition-all duration-[1100ms]`}
                 >
                   <Image
                     src={card.image}
@@ -91,7 +91,7 @@ const Industries = () => {
                     layout="fill"
                     objectFit="cover"
                     className={`${
-                      isExpanded ? "rounded-r-2xl " : "rounded-2xl"
+                      isExpanded ? "rounded-r-2xl" : "rounded-2xl"
                     }`}
                   />
                 </div>
