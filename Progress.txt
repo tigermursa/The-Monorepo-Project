@@ -10,15 +10,15 @@ Project Home Sections                     isComplete                Final check
 
 
 Project Pricing Sections                   
-1)Navbar                                   true
-2)Hero Section                             true
-3)Pricing card Section                     true
-4)Start your 30 days trial                 true
-5)Footer                                   true
+1)Navbar                                   true                       done
+2)Hero Section                             true                       done
+3)Pricing card Section                     true                       done
+4)Start your 30 days trial                 true                       done
+5)Footer                                   true                       done
 
 
 Reminders :
 1) Poppins font should use on Project (done)
 2) clean code base so that any developer understand code easily (tried)
-3) have to test responsiveness 
+3) have to test responsiveness (done)
 4) refactor must (done)

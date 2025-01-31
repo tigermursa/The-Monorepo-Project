@@ -6,11 +6,11 @@ const StaticFirstCard = () => {
     <div
       className={` ${styles.card} flex flex-col justify-center items-center`}
     >
-      <h1 className="text-4xl font-semibold max-w-3xl mx-auto text-center pb-16 text-gray-700">
+      <h1 className=" text-2xl lg:text-4xl font-semibold max-w-3xl mx-auto text-center pb-16 text-gray-700">
         Find and Book Appointments with Local and International Professionals
       </h1>
       <div class="space-y-4   mx-auto flex flex-col justify-center items-center">
-        <div class="flex items-center justify-center space-x-4">
+        <div class="flex flex-col md:flex-row gap-3 md:gap-0 items-center justify-center space-x-4">
           <div class="relative flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

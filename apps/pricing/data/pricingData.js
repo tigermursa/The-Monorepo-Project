@@ -3,8 +3,8 @@ export const icons = {
   tic: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
+      width="15"
+      height="15"
       viewBox="0 0 24 24"
       className="text-green-600"
     >
@@ -21,8 +21,8 @@ export const icons = {
   thunder: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
+      width="25"
+      height="25"
       viewBox="0 0 16 16"
     >
       <path
@@ -35,8 +35,8 @@ export const icons = {
   stack: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
+      width="25"
+      height="25"
       viewBox="0 0 24 24"
     >
       <path
@@ -52,8 +52,8 @@ export const icons = {
   largeStack: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="30"
-      height="30"
+      width="25"
+      height="25"
       viewBox="0 0 256 256"
     >
       <path

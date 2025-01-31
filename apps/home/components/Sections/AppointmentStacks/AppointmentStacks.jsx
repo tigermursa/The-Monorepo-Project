@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./AppointmentStacks.module.css";
 import { useEffect, useRef } from "react";
 import { cardData } from "@/data/AppointmentStackCardData";
+import StaticFirstCard from "./StaticFirstCard";
 
 const alternatives = [
   "Jane",
@@ -44,6 +45,9 @@ const AppointmentStacks = () => {
   return (
     <>
       <div className={styles.container}>
+        {/* static first card */}
+        <StaticFirstCard />
+
         {/* Render cards dynamically */}
         {cardData.map((card, index) => (
           <div

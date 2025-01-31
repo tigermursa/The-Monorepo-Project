@@ -19,12 +19,3 @@ module.exports = {
   },
   plugins: [],
 };
-
-{
-  /* 
-
-
-<Container>
-<AppointmentStacks />
-</Container> */
-}
