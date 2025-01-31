@@ -14,3 +14,9 @@ Project Pricing Sections                   false
 2)Hero Section                             false
 3)Pricing card Section                     false
 4)Start your 30 days trial                 false 
+
+
+Reminders :
+1) Poppins font should use on Project
+2) clean code base so that any developer understand code easily
+3) have to test responsiveness
