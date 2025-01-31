@@ -1,19 +1,20 @@
-// import dynamic from "next/dynamic";
-import Link from "next/link";
-
 // const HomePage = dynamic(() => import("home/HomePage"), {
 //   ssr: false,
 //   loading: () => <p>Loading HomePage...</p>,
 // });
 
+import MainLayout from "@/components/Layouts/MainLayout";
+import Footer from "@/components/Shared/Footer/Footer";
+import Navbar from "@/components/Shared/Navbar/Navbar";
+
 export default function Pricing() {
   return (
     <div>
-      <h1>Pricing App</h1>
-
-      <Link href="http://localhost:3000">
-        <button>Go to Home App</button>
-      </Link>
+      <div>
+        <Navbar />
+        <MainLayout />
+        <Footer />
+      </div>
     </div>
   );
 }
