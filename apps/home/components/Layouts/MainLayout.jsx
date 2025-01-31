@@ -1,3 +1,4 @@
+import Features from "../Sections/Features/Features";
 import HeroSection from "../Sections/HeroSection/HeroSection";
 import Industries from "../Sections/Industries/Industries";
 import SocialProofSection from "../Sections/SocialProofSection/SocialProofSection";
@@ -8,6 +9,7 @@ const MainLayout = () => {
       <HeroSection />
       <SocialProofSection />
       <Industries />
+      <Features />
     </div>
   );
 };

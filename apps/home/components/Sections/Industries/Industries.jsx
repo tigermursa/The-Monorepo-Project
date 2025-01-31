@@ -55,7 +55,7 @@ const Industries = () => {
               className={`px-6 py-2 font-semibold rounded-full  
                 ${
                   activeCard === index
-                    ? "bg-[#19525A]  text-white"
+                    ? "bg-primary  text-white"
                     : "bg-white hover:bg-pink-100 text-gray-800"
                 }`}
               onClick={() => handleCardHover(index)}

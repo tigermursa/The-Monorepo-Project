@@ -13,6 +13,7 @@ module.exports = {
         gray: {
           DEFAULT: "#595959",
         },
+        primary: "#19525A",
       },
     },
   },
