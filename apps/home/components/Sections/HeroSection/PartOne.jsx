@@ -1,29 +1,45 @@
 import Image from "next/image";
-import React from "react";
 
 const PartOne = () => {
   return (
-    <div className="container mx-auto px-4 py-14 text-center relative">
-      <h2 className="text-[#282828] text-4xl md:text-5xl lg:text-[3.3rem] font-extrabold mb-4">
-        Looking for a{" "}
-        <span className="text-[#FF2323] leading-normal">
+    <div className="container mx-auto px-4 py-14 text-center relative container-design-mursalin">
+      {/* Heading */}
+      <h2 className="text-[#282828] text-3xl md:text-5xl lg:text-[3.3rem] font-extrabold mb-4">
+        Looking for a
+        <span className="text-[#FF2323] leading-normal ms-1 me-2">
           Business Solution <br /> for
-        </span>{" "}
+        </span>
         appointments?
       </h2>
 
-      <p className="text-[#667085] text-lg mb-8 mt-7 max-w-full mx-auto">
+      {/* Description */}
+      <p className="text-[#667085] text-lg mb-8 mt-7 max-w-full md:max-w-2xl lg:max-w-3xl mx-auto">
         Ambel simplifies business management by providing tools for scheduling
-        appointments, managing bookkeeping, accepting <br /> payments, sharing
+        appointments, managing bookkeeping, accepting payments, sharing
         resources with customers, sending reminders, and running email marketing
         campaigns.
       </p>
 
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8 relative">
-        <button className="bg-primary hover:scale-105 text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#14444A] transition duration-300">
-          Start A Free Trial
-        </button>
-        <button className="flex items-center hover:scale-105 bg-[#F87316] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#E06512] transition duration-300">
+      {/* Buttons */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-7  ">
+        <div className="relative">
+          <button className="bg-primary hover:scale-105 text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#14444A] transition duration-300 ">
+            Start A Free Trial
+          </button>
+
+          {/* Arrow Image */}
+          <div className=" hidden md:block absolute  -left-[3rem] -bottom-20 transform -translate-y-1/2">
+            <Image
+              src="/symbols/Point to trail.png"
+              width={46}
+              height={62}
+              className="w-[46px] h-[62.5px]"
+              alt="arrow pointer"
+            />
+          </div>
+        </div>
+
+        <button className="flex items-center hover:scale-105 bg-[#F87316] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#E06512] transition duration-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={24}
@@ -39,19 +55,9 @@ const PartOne = () => {
           </svg>
           Find Professionals
         </button>
-
-        {/* Arrow Image */}
-        <div className="absolute right-[60rem] top-12 transform -translate-y-1/2">
-          <Image
-            src="/symbols/Point to trail.png"
-            width={46}
-            height={62}
-            className="w-[46px] h-[62.5px]"
-            alt="arrow pointer"
-          />
-        </div>
       </div>
 
+      {/* Features */}
       <div className="flex flex-col md:flex-row font-medium items-center justify-center gap-4 text-[#027A48]">
         <p className="flex items-center">
           <svg

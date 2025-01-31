@@ -38,3 +38,37 @@ select,
 button {
   font-family: "Poppins", sans-serif;
 }
+
+/* line bg */
+
+.container-design-mursalin {
+  width: 100%;
+  height: 100%;
+  --color: #f8f5f5;
+  background-color: #ffffff;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 140px 140px;
+}

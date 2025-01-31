@@ -11,16 +11,6 @@ const MainLayout = () => {
       <Container>
         <HeroSection />
       </Container>
-      <Container>
-        <SocialProofSection />
-      </Container>
-      <Container>
-        <Industries />
-      </Container>
-      <Features />
-      <Container>
-        <AppointmentStacks />
-      </Container>
     </div>
   );
 };

@@ -19,3 +19,16 @@ module.exports = {
   },
   plugins: [],
 };
+
+{
+  /* <Container>
+<SocialProofSection />
+</Container>
+<Container>
+<Industries />
+</Container>
+<Features />
+<Container>
+<AppointmentStacks />
+</Container> */
+}
