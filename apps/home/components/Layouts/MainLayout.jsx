@@ -6,7 +6,7 @@ import SocialProofSection from "../Sections/SocialProofSection/SocialProofSectio
 
 const MainLayout = () => {
   return (
-    <div className="container border border-red-800  mx-auto">
+    <div className="container   mx-auto">
       <HeroSection />
       <SocialProofSection />
       <Industries />

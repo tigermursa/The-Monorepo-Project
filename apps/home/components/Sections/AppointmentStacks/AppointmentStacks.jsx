@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./AppointmentStacks.module.css";
 import { useEffect, useRef } from "react";
+import StaticFirstCard from "./StaticFirstCard";
+import { cardData } from "@/data/AppointmentStackCardData";
 
 const alternatives = [
   "Jane",
@@ -16,21 +18,20 @@ const alternatives = [
 ];
 
 const AppointmentStacks = () => {
-  const card1Ref = useRef(null);
-  const card2Ref = useRef(null);
-  const card3Ref = useRef(null);
+  const cardRefs = useRef([]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const cards = [card1Ref.current, card2Ref.current, card3Ref.current];
       const scrollY = window.scrollY;
 
-      cards.forEach((card, index) => {
+      cardRefs.current.forEach((card, index) => {
+        if (!card) return;
+
         const cardTop = card.getBoundingClientRect().top;
 
-        //  transforms based on scroll position
+        //  scroll position
         if (scrollY > cardTop + window.innerHeight / 2) {
-          card.style.transform = `translateY(${index * 20}px)`; // Stack cards
+          card.style.transform = `translateY(${index * 0}px)`; // no need to show upper cards as figma
         } else {
           card.style.transform = "translateY(0)";
         }
@@ -44,130 +45,60 @@ const AppointmentStacks = () => {
   return (
     <>
       <div className={styles.container}>
-        {/* Card 1 */}
-        <div ref={card1Ref} className={styles.card}>
-          <div className="flex items-center">
-            <div className="max-w-2xl">
-              <h3 className="text-4xl font-semibold text-white mb-9">
-                One brand in one easy to use system, across all your locations
-              </h3>
-              <p className="text-white mb-9">
-                Give customers a consistent brand experience, online and in
-                person.
-              </p>
-              <button className="text-white text-start rounded-lg font-semibold flex items-center gap-1">
-                Learn more{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={21}
-                    d="M388.364 242.764v178.691A42.547 42.547 0 0 1 345.818 464H90.546A42.544 42.544 0 0 1 48 421.455V166.182a42.543 42.543 0 0 1 42.546-42.546h178.69M464 180.364V48H331.636M216 296L464 48"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div>
-              <Image
-                src="/img/Multi Branch FF.png"
-                width={550}
-                height={472}
-                alt="map-image"
-              />
-            </div>
-          </div>
-        </div>
+        {/* Card 1  static one*/}
+        <StaticFirstCard />
 
-        {/* Card 2 */}
-        <div ref={card2Ref} className={styles.card}>
-          <div className="flex items-center">
-            <div className="max-w-2xl">
-              <h3 className="text-4xl font-semibold text-white mb-9">
-                Invite unlimited team members and assign custom roles
-              </h3>
-              <p className="text-white mb-9">
-                This feature enables organizations to efficiently manage team
-                members across one or multiple locations.
-              </p>
-              <button className="text-white text-start rounded-lg font-semibold flex items-center gap-1">
-                Learn more{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={21}
-                    d="M388.364 242.764v178.691A42.547 42.547 0 0 1 345.818 464H90.546A42.544 42.544 0 0 1 48 421.455V166.182a42.543 42.543 0 0 1 42.546-42.546h178.69M464 180.364V48H331.636M216 296L464 48"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div>
-              <Image
-                src="/img/Multi Branch FF.png"
-                width={550}
-                height={472}
-                alt="map-image"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div ref={card3Ref} className={styles.card}>
-          <div className="flex items-center">
-            <div className="max-w-2xl">
-              <h3 className="text-4xl font-semibold text-white mb-9">
-                Securely manage and organize payments: Cash, Debit, Credit
-              </h3>
-              <p className="text-white mb-9">
-                Give customers a consistent brand experience, online and in
-                person.
-              </p>
-              <button className="text-white text-start rounded-lg font-semibold flex items-center gap-1">
-                Learn more{" "}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 512 512"
-                >
-                  <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={21}
-                    d="M388.364 242.764v178.691A42.547 42.547 0 0 1 345.818 464H90.546A42.544 42.544 0 0 1 48 421.455V166.182a42.543 42.543 0 0 1 42.546-42.546h178.69M464 180.364V48H331.636M216 296L464 48"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-            <div>
-              <Image
-                src="/img/payment Home.png"
-                width={550}
-                height={472}
-                alt="map-image"
-              />
+        {/* other cards dynamically */}
+        {cardData.map((card, index) => (
+          <div
+            key={index}
+            ref={(el) => (cardRefs.current[index] = el)} // Store refs in the array
+            className={`${styles.card} overflow-hidden `}
+            style={{ backgroundColor: card.backgroundColor }}
+          >
+            <div
+              className={`flex items-center   overflow-hidden   ${
+                card.theme ? "text-white" : "text-black"
+              } `}
+            >
+              <div className="max-w-2xl ">
+                <h3 className={`text-4xl font-semibold   mb-9`}>
+                  {card.title}
+                </h3>
+                <p className=" mb-9">{card.text}</p>
+                <button className=" text-start rounded-lg font-semibold flex items-center gap-1">
+                  Learn more{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={21}
+                      d="M388.364 242.764v178.691A42.547 42.547 0 0 1 345.818 464H90.546A42.544 42.544 0 0 1 48 421.455V166.182a42.543 42.543 0 0 1 42.546-42.546h178.69M464 180.364V48H331.636M216 296L464 48"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+              <div className=" ">
+                <Image
+                  src={card.image}
+                  width={550}
+                  height={425}
+                  className="p-4 h-[425px] object-contain"
+                  alt={card.alt}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
-      <div className="mt-20 flex items-center justify-center gap-6 mb-20">
+      <div className="mt-20 flex items-center justify-center mb-16 gap-6">
         <p className="text-lg">Replace:</p>
         <ul className="flex items-center gap-4 text-[#016DA3] text-sm">
           {alternatives.map((item, index) => (

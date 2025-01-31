@@ -20,3 +20,4 @@ Reminders :
 1) Poppins font should use on Project
 2) clean code base so that any developer understand code easily
 3) have to test responsiveness
+4) refactor must

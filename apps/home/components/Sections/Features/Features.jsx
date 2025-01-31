@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Features = () => {
   return (
-    <div className="bg-primary py-24 px-4 sm:px-6 lg:px-8 mb-5">
+    <div className="bg-primary py-24 px-4 sm:px-6 lg:px-8 mb-16">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
           <p className="text-[#DC6803] font-bold text-base">Features</p>
