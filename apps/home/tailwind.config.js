@@ -23,7 +23,7 @@ module.exports = {
 {
   /* 
 
-<Features />
+
 <Container>
 <AppointmentStacks />
 </Container> */

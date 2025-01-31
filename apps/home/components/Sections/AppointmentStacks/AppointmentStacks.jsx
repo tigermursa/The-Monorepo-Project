@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./AppointmentStacks.module.css";
 import { useEffect, useRef } from "react";
-import StaticFirstCard from "./StaticFirstCard";
 import { cardData } from "@/data/AppointmentStackCardData";
 
 const alternatives = [
@@ -29,9 +28,9 @@ const AppointmentStacks = () => {
 
         const cardTop = card.getBoundingClientRect().top;
 
-        //  scroll position
+        // Adjust scroll position logic for responsiveness
         if (scrollY > cardTop + window.innerHeight / 2) {
-          card.style.transform = `translateY(${index * 0}px)`; // no need to show upper cards as figma
+          card.style.transform = `translateY(${index * 0}px)`; // No need to show upper cards as per Figma
         } else {
           card.style.transform = "translateY(0)";
         }
@@ -45,28 +44,25 @@ const AppointmentStacks = () => {
   return (
     <>
       <div className={styles.container}>
-        {/* Card 1  static one*/}
-        <StaticFirstCard />
-
-        {/* other cards dynamically */}
+        {/* Render cards dynamically */}
         {cardData.map((card, index) => (
           <div
             key={index}
             ref={(el) => (cardRefs.current[index] = el)} // Store refs in the array
-            className={`${styles.card} overflow-hidden `}
+            className={`${styles.card} overflow-hidden`}
             style={{ backgroundColor: card.backgroundColor }}
           >
             <div
-              className={`flex items-center   overflow-hidden   ${
+              className={`flex flex-col md:flex-row items-center justify-between overflow-hidden ${
                 card.theme ? "text-white" : "text-black"
-              } `}
+              }`}
             >
-              <div className="max-w-2xl ">
-                <h3 className={`text-4xl font-semibold   mb-9`}>
+              <div className="max-w-2xl p-4 md:p-0">
+                <h3 className={`text-2xl md:text-4xl font-semibold mb-6`}>
                   {card.title}
                 </h3>
-                <p className=" mb-9">{card.text}</p>
-                <button className=" text-start rounded-lg font-semibold flex items-center gap-1">
+                <p className="mb-6 text-sm md:text-base">{card.text}</p>
+                <button className="text-start rounded-lg font-semibold flex items-center gap-1">
                   Learn more{" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,12 +81,12 @@ const AppointmentStacks = () => {
                   </svg>
                 </button>
               </div>
-              <div className=" ">
+              <div className="w-full md:w-auto">
                 <Image
                   src={card.image}
                   width={550}
                   height={425}
-                  className="p-4 h-[425px] object-contain"
+                  className="p-4 h-[300px] md:h-[425px] object-contain"
                   alt={card.alt}
                 />
               </div>
@@ -98,11 +94,16 @@ const AppointmentStacks = () => {
           </div>
         ))}
       </div>
-      <div className="mt-20 flex items-center justify-center mb-16 gap-6">
+
+      {/* Alternatives Section */}
+      <div className="mt-20 flex flex-col md:flex-row items-center justify-center mb-16 gap-4 px-4">
         <p className="text-lg">Replace:</p>
-        <ul className="flex items-center gap-4 text-[#016DA3] text-sm">
+        <ul className="flex flex-wrap justify-center gap-2 text-[#016DA3] text-sm">
           {alternatives.map((item, index) => (
-            <li key={index} className="bg-gray-100 px-3 py-1 rounded-md">
+            <li
+              key={index}
+              className="bg-gray-100 px-3 py-1 rounded-md whitespace-nowrap"
+            >
               {item}
             </li>
           ))}

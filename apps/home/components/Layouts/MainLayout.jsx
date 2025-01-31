@@ -17,6 +17,10 @@ const MainLayout = () => {
       <Container>
         <Industries />
       </Container>
+      <Features />
+      <Container>
+        <AppointmentStacks />
+      </Container>
     </div>
   );
 };

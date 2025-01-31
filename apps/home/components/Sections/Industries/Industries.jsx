@@ -57,11 +57,11 @@ const Industries = () => {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 md:gap-6 mb-8 md:mb-20 w-full items-center mx-auto">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-6 mb-8 md:mb-20 w-full lg:w-max items-center mx-auto lg:border rounded-3xl">
           {cards.map((card, index) => (
             <button
               key={card.id}
-              className={`px-4 py-2 text-sm md:text-base font-semibold rounded-full whitespace-nowrap  
+              className={`px-4 py-2  text-sm md:text-base font-semibold rounded-full whitespace-nowrap  
                 ${
                   activeCard === index
                     ? "bg-primary text-white"

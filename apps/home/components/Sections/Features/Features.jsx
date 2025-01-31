@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const Features = () => {
   return (
-    <div className="bg-primary py-24 px-4 sm:px-6 lg:px-8 mb-16">
+    <div className="bg-primary py-10 md:py-24 px-4 sm:px-6 lg:px-8 mb-16">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
-          <p className="text-[#DC6803] font-bold text-base">Features</p>
-          <h2 className="text-4xl font-bold text-white">
-            Popular Businesses and Practitioners <br /> who use Ambel
+          <p className="text-[#DC6803] font-bold text-base mb-4">Features</p>
+          <h2 className=" text-2xl md:text-4xl font-bold text-white">
+            Solve all your needs with a single software solution
           </h2>
-          <p className="text-white mt-5">
+          <p className="text-white mt-5 max-w-3xl mx-auto">
             Our platform supports a diverse range of professionals, including
             healthcare providers, medi-spas, salons, fitness coaches, law
             agencies, beauty specialists, consultants, and therapists.
