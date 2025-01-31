@@ -11,6 +11,9 @@ const MainLayout = () => {
       <Container>
         <HeroSection />
       </Container>
+      <Container>
+        <SocialProofSection />
+      </Container>
     </div>
   );
 };

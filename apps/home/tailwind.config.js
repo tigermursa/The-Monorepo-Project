@@ -21,9 +21,7 @@ module.exports = {
 };
 
 {
-  /* <Container>
-<SocialProofSection />
-</Container>
+  /* 
 <Container>
 <Industries />
 </Container>
