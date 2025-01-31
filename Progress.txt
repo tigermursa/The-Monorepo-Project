@@ -1,6 +1,6 @@
 Project Home Sections                     isComplete                Final check    
 
-1)Navbar                                   true
+1)Navbar                                   true                       done   
 2)Hero-Section                             true
 3)Social proof Section                     true
 4)Industries Section (Animation)           true

@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <MainLayout />
-      <Footer />
+      {/* <MainLayout /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
