@@ -1,7 +1,12 @@
 import React from "react";
+import PartOne from "./PartOne";
 
 const HeroSection = () => {
-  return <div>This is the hero section wow</div>;
+  return (
+    <div>
+      <PartOne />
+    </div>
+  );
 };
 
 export default HeroSection;

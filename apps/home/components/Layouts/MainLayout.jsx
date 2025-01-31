@@ -2,7 +2,7 @@ import HeroSection from "../HeroSection/HeroSection";
 
 const MainLayout = () => {
   return (
-    <div className="container bg-gray-200 h-[500px] mx-auto">
+    <div className="container border border-red-800 h-[500px] mx-auto">
       <HeroSection />
     </div>
   );

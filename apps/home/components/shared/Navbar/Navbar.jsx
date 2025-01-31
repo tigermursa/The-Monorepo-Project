@@ -11,7 +11,7 @@ const Navbar = () => {
           width={150}
           height={38}
           alt="Ambel Logo"
-          className="w-[150px] h-[38px]"
+          className="w-[150px] h-[38px] cursor-pointer"
           priority
         />
       </div>

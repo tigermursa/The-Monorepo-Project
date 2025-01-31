@@ -138,7 +138,7 @@ const Footer = () => {
           />
         </div>
         {/* Copyright Section */}
-        <div className="mt-8 pt-8 border-t border-white/10">
+        <div className="mt-10 pt-10 border-t border-white/30">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm opacity-75">
               Copyright © 2022. Ambal. All rights reserved.
