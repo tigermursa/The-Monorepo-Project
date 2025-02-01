@@ -38,7 +38,7 @@ const Industries = () => {
   };
 
   return (
-    <div className="min-h-screen py-12 md:py-24 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-5 px-4 sm:px-6 lg:px-5">
       <div className="max-w-7xl mx-auto">
         {/* Heading Section */}
         <div className="mb-8 md:mb-16">
@@ -48,7 +48,7 @@ const Industries = () => {
           <h2 className="text-2xl md:text-4xl font-bold text-center text-[#101828]">
             Popular Businesses and Practitioners <br /> who use Ambel
           </h2>
-          <p className="text-center mt-3 md:mt-5 text-sm md:text-base text-[#667085]">
+          <p className="text-center max-w-3xl mx-auto mt-3 md:mt-5 text-sm md:text-base text-[#667085]">
             Our platform supports a diverse range of professionals, with popular
             industries; including: healthcare providers, medi spas, salons,
             fitness coaches, law agencies, beauty specialists, consultants, and

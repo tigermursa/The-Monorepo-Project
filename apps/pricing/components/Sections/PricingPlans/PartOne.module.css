@@ -31,10 +31,11 @@
 }
 
 .heading {
-  font-size: 5.875rem;
+  font-size: 2rem; /* Adjusted for mobile */
   font-weight: bold;
   color: #307d33;
   transition: color 0.3s ease-in-out;
+  line-height: 1.2; /* Added for better readability */
 }
 
 @media (min-width: 768px) {
@@ -52,7 +53,7 @@
 .description {
   color: #0089c9;
   margin-top: 1rem;
-  font-size: 1.125rem;
+  font-size: 1rem; /* Adjusted for mobile */
   transition: color 0.3s ease-in-out;
 }
 
@@ -76,10 +77,18 @@
 
 .toggleButton {
   padding: 0.5rem 1.5rem;
-  width: 180px;
+  width: 120px; /* Adjusted for mobile */
   font-weight: 600;
   border-radius: 0;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-size: 0.875rem; /* Adjusted for mobile */
+}
+
+@media (min-width: 768px) {
+  .toggleButton {
+    width: 180px;
+    font-size: 1rem;
+  }
 }
 
 .toggleButton.active {
