@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/home",
+    "apps/pricing"
   ],
   "scripts": {
     "dev": "concurrently \"npm --prefix apps/home run dev\" \"npm --prefix apps/pricing run dev\""

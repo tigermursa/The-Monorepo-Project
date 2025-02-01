@@ -17,10 +17,11 @@ module.exports = {
           filename: "static/chunks/remoteEntry.js",
           remotes: {
             pricing:
-              "pricing@http://localhost:3001/_next/static/chunks/remoteEntry.js",
+              "pricing@https://monorepopricing.vercel.app/_next/static/chunks/remoteEntry.js",
           },
           exposes: {
-            "./HomePage": "./pages/home.js",
+            // "./home": "/pages/index.js", //home also exposed for pricing
+            "./pages-map": "./pages-map.js",
           },
           shared: {
             react: { singleton: true, eager: true },

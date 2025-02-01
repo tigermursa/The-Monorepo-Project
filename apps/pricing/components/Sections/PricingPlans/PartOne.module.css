@@ -1,0 +1,103 @@
+.headingContainer {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .headingContainer {
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+  }
+}
+
+.pricingTag {
+  color: #19525a;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  background-color: #f9f5ff;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .pricingTag {
+    font-size: 1rem;
+  }
+}
+
+.heading {
+  font-size: 5.875rem;
+  font-weight: bold;
+  color: #307d33;
+  transition: color 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+.description {
+  color: #0089c9;
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  transition: color 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .description {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+  }
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #ececec;
+  width: max-content;
+  margin: 0 auto;
+  border: 4px solid #ececec;
+}
+
+.toggleButton {
+  padding: 0.5rem 1.5rem;
+  width: 180px;
+  font-weight: 600;
+  border-radius: 0;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.toggleButton.active {
+  background-color: white;
+  color: #444;
+}
+
+.toggleButton.inactive {
+  background-color: #ececec;
+  color: #444;
+}
+
+.toggleButton:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.toggleButton:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}

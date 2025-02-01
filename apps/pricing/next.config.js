@@ -8,11 +8,11 @@ module.exports = {
           name: "pricing",
           filename: "static/chunks/remoteEntry.js",
           remotes: {
-            home: "home@http://localhost:3000/_next/static/chunks/remoteEntry.js",
+            home: "home@https://monorepohome.vercel.app/_next/static/chunks/remoteEntry.js",
           },
           exposes: {
-            "./PricingPage": "./pages/pricing.js",
-            "./index": "./pages/index.js",
+            "./pricing-page": "./pages/index.js", //giving full project to the home form here
+            "./pages-map": "./pages-map.js",
           },
           shared: {
             react: { singleton: true, eager: true },
