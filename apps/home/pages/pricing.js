@@ -1,3 +1,5 @@
+//! this is the page whew I am loading the pricing project's index.js using module federation
+
 import Loader from "@/components/shared/Loader/Loader";
 import { useState, useEffect, lazy, Suspense } from "react";
 
@@ -11,7 +13,11 @@ const Pricing = () => {
   }, []);
 
   if (!mounted) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <Loader />
+      </div>
+    );
   }
 
   if (process.browser) {
@@ -21,6 +27,7 @@ const Pricing = () => {
   return (
     <div>
       <Suspense fallback={<Loader />}>
+        {/* Pricing project's thing here */}
         <RemoteTitle />
       </Suspense>
     </div>

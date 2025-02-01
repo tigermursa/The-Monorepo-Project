@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
+      {/* My main layout to maintain full project more organized  */}
       <MainLayout />
       <Footer />
     </div>
