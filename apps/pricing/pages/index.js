@@ -18,5 +18,3 @@ export default function Pricing() {
     </div>
   );
 }
-
-// Keep button styles...

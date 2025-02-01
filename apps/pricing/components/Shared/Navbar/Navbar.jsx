@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm py-4 px-4 md:px-16 flex justify-between items-center">
       {/* Logo */}
-      <Link href="http://localhost:3000">
+      <Link href="https://monorepohome.vercel.app/">
         <Image
           src="/logos/ambel copy 2 no pedding 1.png"
           width={150}

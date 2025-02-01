@@ -1,3 +1,4 @@
+// pricing/next.config.js
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
 module.exports = {
@@ -8,7 +9,7 @@ module.exports = {
           name: "pricing",
           filename: "static/chunks/remoteEntry.js",
           remotes: {
-            home: "home@http://localhost:3000/_next/static/chunks/remoteEntry.js",
+            home: "home@https://monorepohome.vercel.app/_next/static/chunks/remoteEntry.js",
           },
           exposes: {
             "./PricingPage": "./pages/pricing.js",

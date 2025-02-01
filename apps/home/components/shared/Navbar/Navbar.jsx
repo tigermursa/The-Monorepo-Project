@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const navData = [
     { label: "Features", href: "#", hasDropdown: true },
-    { label: "Pricing", href: "http://localhost:3001" },
+    { label: "Pricing", href: "https://monorepopricing.vercel.app/" },
     { label: "Solutions", href: "#", hasDropdown: true },
     { label: "Resources", href: "#", hasDropdown: true },
     { label: "Find Professionals", href: "#" },

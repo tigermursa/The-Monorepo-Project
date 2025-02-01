@@ -1,18 +1,26 @@
 const NextFederationPlugin = require("@module-federation/nextjs-mf");
 
 module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
   webpack(config, options) {
     if (!options.isServer) {
       config.plugins.push(
         new NextFederationPlugin({
-          name: "pricing",
+          name: "home",
           filename: "static/chunks/remoteEntry.js",
           remotes: {
-            home: "home@http://localhost:3000/_next/static/chunks/remoteEntry.js",
+            pricing:
+              "pricing@https://monorepopricing.vercel.app/_next/static/chunks/remoteEntry.js",
           },
           exposes: {
-            "./PricingPage": "./pages/pricing.js",
-            "./index": "./pages/index.js",
+            "./HomePage": "./pages/home.js",
           },
           shared: {
             react: { singleton: true, eager: true },
